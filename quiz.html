@@ -3,16 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio do Amor - Quiz</title>
+    <title>Errou, Bebeu</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="quiz-container">
-        <h1>Desafio do Amor</h1>
-        <div id="question-container"></div>
-        <div id="answers-container"></div>
-        <button id="next-button" onclick="nextQuestion()">Próxima Pergunta</button>
-        <div id="result-container" style="display: none;"></div>
+    <div class="container">
+        <h1>Errou, bebeu</h1>
+        <form id="quizForm">
+            <div id="questions-container">
+                <!-- Pergunta 1 -->
+                <div class="question" id="q1">
+                    <p>1. Qual é a cor favorita do seu amor?</p>
+                    <input type="radio" name="q1" value="A"> Azul<br>
+                    <input type="radio" name="q1" value="B"> Verde<br>
+                    <input type="radio" name="q1" value="C"> Vermelho<br>
+                    <input type="radio" name="q1" value="D"> Amarelo<br><br>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+
+                <!-- Pergunta 2 -->
+                <div class="question" id="q2" style="display: none;">
+                    <p>2. Qual é o prato favorito do seu amor?</p>
+                    <input type="radio" name="q2" value="A"> Sushi<br>
+                    <input type="radio" name="q2" value="B"> Pizza<br>
+                    <input type="radio" name="q2" value="C"> Lasanha<br>
+                    <input type="radio" name="q2" value="D"> Hambúrguer<br><br>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+
+                <!-- Adicione as outras perguntas aqui -->
+                
+                <!-- Pergunta 20 -->
+                <div class="question" id="q20" style="display: none;">
+                    <p>20. Qual é o destino de viagem dos sonhos do seu amor?</p>
+                    <input type="radio" name="q20" value="A"> Paris<br>
+                    <input type="radio" name="q20" value="B"> Nova York<br>
+                    <input type="radio" name="q20" value="C"> Tóquio<br>
+                    <input type="radio" name="q20" value="D"> Rio de Janeiro<br><br>
+                    <button type="button" onclick="submitQuiz()">Enviar</button>
+                </div>
+            </div>
+        </form>
     </div>
     <script src="script.js"></script>
 </body>
